@@ -3,6 +3,7 @@ import Navbar from "../Navbar/Navbar";
 import { useNavigate } from "react-router-dom";
 import "./style/Home.css";
 import DownNavbar from "../Navbar/DownNavbar";
+import Footer from "../Footer/Footer";
 
 function Home() {
   // GO TO NEXT PAGE  ******************************************
@@ -10,7 +11,7 @@ function Home() {
   const navigate = useNavigate();
 
   return (
-    <div>
+    <>
       <div className="navbardivfix">
         <Navbar />
       </div>
@@ -47,7 +48,7 @@ function Home() {
           </div>
 
           <div className="videodiv">
-            <video width="700px" autoPlay loop muted>
+            <video className="video" width="700px" autoPlay loop muted>
               <source
                 src="https://videos.ctfassets.net/wl95ljfippl8/4mknj7oTndciGSdFtTDjZq/adcfe61bb0700d98af81f1f47e72a787/Homepage_Brand_Video_May_2022_V2.mp4"
                 type="video/mp4"
@@ -75,8 +76,8 @@ function Home() {
         >
           <img
             className="imglogo"
-            src="https://assets.stickpng.com/images/600c5da489799d00044aee0a.png"
-            alt=""
+            src="http://photos.prnewswire.com/prnfull/20070907/NYF044LOGO"
+            alt="COLE HAAN"
           />
           <img
             className="imglogo"
@@ -85,9 +86,9 @@ function Home() {
           />
           <img
             className="imglogo"
-            src="https://assets.stickpng.com/images/589a4c455aa6293a4aac48ca.png
+            src="https://s27.q4cdn.com/708721433/files/images/new-logos/image-(10).png
          "
-            alt=""
+            alt="EXPEDIA"
           />
           <img
             className="imglogo"
@@ -97,9 +98,9 @@ function Home() {
           />
           <img
             className="imglogo"
-            src="https://assets.stickpng.com/images/58483210cef1014c0b5e4aa9.png
+            src="https://www.pngfind.com/pngs/m/680-6800364_logo-time-magazine-png-transparent-png.png
          "
-            alt=""
+            alt="TIME"
           />
           <img
             className="imglogo"
@@ -110,7 +111,7 @@ function Home() {
         </div>
       </div>
 
-      <div
+      <div className="createName"
         style={{
           backgroundColor: "whitesmoke",
           height: "400px",
@@ -120,7 +121,7 @@ function Home() {
           justifyContent: "center",
           padding: "100px",
         }}
-      >
+        >
         <h1
           style={{
             width: "800px",
@@ -128,7 +129,7 @@ function Home() {
             fontSize: "80px",
             fontWeight: "600",
             lineHeight: "90px",
-            textAlign:'center'
+            textAlign: "center",
           }}
         >
           Create solutions that mirror your business
@@ -174,7 +175,7 @@ function Home() {
           </div>
 
           <div className="videodiv">
-            <video width="700px" autoPlay loop muted>
+            <video className="video" width="700px" autoPlay loop muted>
               <source
                 src="https://static.airtable.com/images/homescreen/Homepage_Anim_02_Unite_FINAL.mp4"
                 type="video/mp4"
@@ -188,7 +189,7 @@ function Home() {
       <div className="topdiv">
         <div className="topdivflex">
           <div className="videodiv">
-            <video width="700px" autoPlay loop muted>
+            <video className="video" width="700px" autoPlay loop muted>
               <source
                 src="https://static.airtable.com/images/homescreen/Homepage_Anim_03_TurnInformation_FINAL.mp4"
                 type="video/mp4"
@@ -224,7 +225,7 @@ function Home() {
 
       <div className="topdiv">
         <div className="topdivflex">
-          <div className="videodiv">
+          <div className="">
             <h1
               style={{
                 fontSize: "80px",
@@ -293,7 +294,7 @@ function Home() {
             </h3>
           </div>
           <div className="videodiv">
-            <video width="700px" autoPlay loop muted>
+            <video className="video" width="700px" autoPlay loop muted>
               <source
                 src="https://static.airtable.com/images/homescreen/Homepage_Anim_05_SeeValueFast_FINAL.mp4"
                 type="video/mp4"
@@ -310,7 +311,7 @@ function Home() {
             <img
               style={{
                 width: "800px",
-                height: "700px",
+                height: "600px",
                 margin: "auto",
               }}
               src="https://static.airtable.com/images/homescreen/homepage-apps-dashboard.jpg
@@ -346,7 +347,7 @@ function Home() {
 
       <div className="topdiv">
         <div className="topdivflex">
-          <div className="videodiv">
+          <div className="">
             <h1
               style={{
                 fontSize: "80px",
@@ -428,11 +429,12 @@ function Home() {
         </div>
       </div>
       <div className="topdiv">
-        <div className="fisrtdivh1"
-        style={{
-          margin:'auto',
-          textAlign:'center'
-        }}
+        <div
+          className="fisrtdivh1"
+          style={{
+            margin: "auto",
+            textAlign: "center",
+          }}
         >
           <h1
             style={{
@@ -451,11 +453,14 @@ function Home() {
         </div>
       </div>
 
-            {/* <div> */}
-              <DownNavbar/>
-            {/* </div> */}
+      {/* <div> */}
+      <DownNavbar />
+      {/* </div> */}
 
-    </div>
+      <div>
+        <Footer />
+      </div>
+    </>
   );
 }
 
