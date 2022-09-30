@@ -453,9 +453,9 @@ function Home() {
         </div>
       </div>
 
-      {/* <div> */}
+      
       <DownNavbar />
-      {/* </div> */}
+     
 
       <div>
         <Footer />
