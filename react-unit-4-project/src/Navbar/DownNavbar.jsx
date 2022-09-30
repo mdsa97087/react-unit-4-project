@@ -1,17 +1,23 @@
 import React from "react";
 import "./Navbar.css";
 import { useNavigate } from "react-router-dom";
+import { BsFacebook } from "react-icons/bs";
+
+import { AiFillLinkedin } from "react-icons/ai";
+import { IoLogoTwitter } from "react-icons/io";
+import { GrInstagram } from "react-icons/gr";
+import { AiFillYoutube } from "react-icons/ai";
 
 
 function DownNavbar() {
   const navigate = useNavigate();
 
   return (
-    <div style={{
-      width:'1200px',
-      margin:'auto'
-    }}
-    
+    <div
+      style={{
+        width: "1200px",
+        margin: "auto",
+      }}
     >
       <nav className="navbar navbar-expand-lg bg-light">
         <div className="container-fluid">
@@ -93,40 +99,45 @@ function DownNavbar() {
               <ul className="navbar-nav me-auto mb-3 mb-lg-0">
                 <li className="nav-item">
                   <button
-                    style={{
-                      border: "1px solid rgb(60, 52, 52)",
-                      borderRadius: "8px",
-                    }}
-                    onClick={() => navigate("/contactsales")}
+                    onClick={() => navigate("/#")}
                     className="nav-link active"
                   >
-                    {" "}
-                    Contact Sales
+                   <IoLogoTwitter/>
                   </button>
                 </li>
 
                 <li className="nav-item">
                   <button
-                    style={{
-                      // border: "1px solid rgb(60, 52, 52)",
-                      // borderRadius: "8px",
-                      backgroundColor: "rgba(37, 37, 240, 0.878)",
-                      color: "aliceblue",
-                    }}
-                    onClick={() => navigate("/signup")}
+                    
+                    onClick={() => navigate("/#")}
                     className="nav-link active"
                   >
-                    Sign up for free
+                   <AiFillLinkedin/>
                   </button>
                 </li>
 
                 <li className="nav-item">
                   <button
-                    onClick={() => navigate("/signin")}
+                    onClick={() => navigate("/#")}
                     className="nav-link active"
                   >
-                  
-                    Sign In
+                    <BsFacebook />
+                  </button>
+                </li>
+                <li className="nav-item">
+                  <button
+                    onClick={() => navigate("/#")}
+                    className="nav-link active"
+                  >
+                    <GrInstagram />
+                  </button>
+                </li>
+                <li className="nav-item">
+                  <button
+                    onClick={() => navigate("/#")}
+                    className="nav-link active"
+                  >
+                    <AiFillYoutube />
                   </button>
                 </li>
               </ul>
