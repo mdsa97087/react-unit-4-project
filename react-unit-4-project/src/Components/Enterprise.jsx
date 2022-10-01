@@ -1,8 +1,11 @@
 import React from 'react'
+import AnotherNavbar from '../Navbar/AnotherNavbar'
 
 function Enterprise() {
   return (
-    <div>Enterprise</div>
+    <div>
+      <AnotherNavbar />
+    </div>
   )
 }
 
