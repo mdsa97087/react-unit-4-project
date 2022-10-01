@@ -1,5 +1,6 @@
 import { color } from "@chakra-ui/react";
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { Link } from "react-router-dom";
 import SignIn from "./Signin";
 import "./style/Signup.css";
 
@@ -19,7 +20,7 @@ function Signupforfree() {
       localStorage.setItem("Email", JSON.stringify(email));
       localStorage.setItem("Password", JSON.stringify(password));
 
-      console.log("set data in local login");
+      console.log("set  Login data  in local Storage");
       setLogin(!login);
     }
   }
@@ -33,11 +34,13 @@ function Signupforfree() {
       {login ? (
         <div className="bigdiv">
           <div className="imgdiv">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Airtable_Logo.svg/245px-Airtable_Logo.svg.png?20190330165554
+            <Link to="/">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Airtable_Logo.svg/245px-Airtable_Logo.svg.png?20190330165554
               "
-              alt=""
-            />
+                alt=""
+              />
+            </Link>
           </div>
           {flag && (
             <h4
@@ -80,11 +83,25 @@ function Signupforfree() {
                   fontSize: "20px",
                 }}
               >
-                Continue
+                Sign Up
               </button>
             </div>
           </form>
-           {/* *****************************GO TO NEXT PAGE BY LOGIN DATA  */}
+          {/* *****************************GO TO NEXT PAGE BY LOGIN DATA  */}
+          <Link to='/signin'>
+                 <h5
+              style={{
+                textAlign: "center",
+                margin: "auto",
+                color: "green",
+              }}
+            >
+              User Already Register
+            </h5>
+          </Link>
+
+          <br />
+          <br />
           <p
             style={{
               textAlign: "center",

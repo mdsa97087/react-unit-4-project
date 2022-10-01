@@ -1,14 +1,17 @@
 import { color } from "@chakra-ui/react";
-import React, { useState } from "react";
+import React, { useState,useContext } from "react";
 import { Link } from "react-router-dom";
 import "./style/Signup.css";
 import Home from "./Home";
+import {AppContext} from "../AuthContext/Authcontext"
+
 
 function SignIn() {
   const [email, setEmaillog] = useState("");
   const [password, setPasswordlog] = useState("");
   const [flag, setFlag] = useState(false);
   const [home, setHome] = useState(true);
+  const {authState, loginUser } = useContext(AppContext);
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -24,6 +27,7 @@ function SignIn() {
     } else {
       setHome(!home);
       setFlag(false);
+      loginUser(true)
     }
   }
 
@@ -93,7 +97,7 @@ function SignIn() {
                   fontSize: "20px",
                 }}
               >
-                Continue
+                Sign In
               </button>
             </div>
           </form>

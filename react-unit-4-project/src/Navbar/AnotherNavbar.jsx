@@ -1,22 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Navbar.css";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { MdOutlineArrowRightAlt } from "react-icons/md";
+import { AppContext } from "../AuthContext/Authcontext";
 
-function Navbar() {
+function AnotherNavbar() {
   const navigate = useNavigate();
+  const { authState, logoutUser } = useContext(AppContext);
+
+  const logout = () => {
+    logoutUser(false);
+  };
 
   return (
     <div className="navbarmain12">
-      <div className="pclass">
-        <p className="pclass1">
-          Learn how to build visual and interactive apps using Interface
-          Designer
-          <span className="spanarrow">
-            Watch webinar <MdOutlineArrowRightAlt className="spanarrow" />
-          </span>
-        </p>
-      </div>
       <nav className="navbar navbar-expand-lg bg-light">
         <div className="container-fluid">
           <img
@@ -104,33 +101,42 @@ function Navbar() {
                     onClick={() => navigate("/contactsales")}
                     className="nav-link active"
                   >
-                    {" "}
                     Contact Sales
                   </button>
                 </li>
-
                 <li className="nav-item">
                   <button
-                    style={{
-                      // border: "1px solid rgb(60, 52, 52)",
-                      // borderRadius: "8px",
-                      backgroundColor: "rgba(37, 37, 240, 0.878)",
-                      color: "aliceblue",
-                    }}
-                    onClick={() => navigate("/signup")}
+                    onClick={() => navigate("/#")}
                     className="nav-link active"
                   >
-                    Sign up for free
+                    Base
                   </button>
                 </li>
 
-                <li className="nav-item">
+                <li
+                  className="nav-item"
+                  style={{
+                    margin: "0 5px 0 40px",
+                  }}
+                >
                   <button
-                    onClick={() => navigate("/signin")}
                     className="nav-link active"
+                    style={{
+                      padding: "0",
+                    }}
+                    onClick={logout}
                   >
-                    {" "}
-                    Sign In
+                    <img
+                      style={{
+                        height: "40px",
+                        width: "50px",
+                        border: "1px solid",
+                        // margin: "0 5px 0 40px",
+                      }}
+                      src="https://cdn3d.iconscout.com/3d/premium/preview/logout-5611736-4696509@0.png?w=0&h=700&f=jpeg
+"
+                      alt=""
+                    />
                   </button>
                 </li>
               </ul>
@@ -142,4 +148,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default AnotherNavbar;

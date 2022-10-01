@@ -1,14 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Footer from "../Footer/Footer";
+import AnotherNavbar from "../Navbar/AnotherNavbar";
 import DownNavbar from "../Navbar/DownNavbar";
 import Navbar from "../Navbar/Navbar";
 import "./style/Product.css";
+import "./style/Home.css";
 
 function Product() {
   return (
     <>
-      <Navbar />
+      <AnotherNavbar />
 
       <div className="productbigdiv">
         <div className="Scrolldiv">
@@ -109,6 +111,59 @@ function Product() {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div
+        style={{
+          // border: "1px solid red",
+          height: "100px",
+          marginTop: '200px',
+          marginBottom: '0px'
+        }}
+      >
+        <div
+          style={{
+            width: "1200px",
+            display: "flex",
+            margin: "auto",
+            gap: "80px",
+            justifyContent: "center",
+          }}
+        >
+          <img
+            className="imglogo"
+            src="http://photos.prnewswire.com/prnfull/20070907/NYF044LOGO"
+            alt="COLE HAAN"
+          />
+          <img
+            className="imglogo"
+            src="https://www.clipartmax.com/png/middle/196-1965267_medium-logo-medium.png"
+            alt=""
+          />
+          <img
+            className="imglogo"
+            src="https://s27.q4cdn.com/708721433/files/images/new-logos/image-(10).png
+         "
+            alt="EXPEDIA"
+          />
+          <img
+            className="imglogo"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1198px-Netflix_2015_logo.svg.png?20190206123158
+         "
+            alt=""
+          />
+          <img
+            className="imglogo"
+            src="https://www.pngfind.com/pngs/m/680-6800364_logo-time-magazine-png-transparent-png.png
+         "
+            alt="TIME"
+          />
+          <img
+            className="imglogo"
+            src="https://www.citypng.com/public/uploads/preview/-11597191761n5ghafjnrt.png
+         "
+            alt=""
+          />
         </div>
       </div>
       <div

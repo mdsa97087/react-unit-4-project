@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import Navbar from "../Navbar/Navbar";
 import { useNavigate } from "react-router-dom";
 import "./style/Home.css";
 import DownNavbar from "../Navbar/DownNavbar";
 import Footer from "../Footer/Footer";
+import { AppContext } from "../AuthContext/Authcontext";
+
 
 function Home() {
   // GO TO NEXT PAGE  ******************************************
-
+  const { authState, loginUser } = useContext(AppContext);
   const navigate = useNavigate();
 
   return (
@@ -111,7 +113,8 @@ function Home() {
         </div>
       </div>
 
-      <div className="createName"
+      <div
+        className="createName"
         style={{
           backgroundColor: "whitesmoke",
           height: "400px",
@@ -121,7 +124,7 @@ function Home() {
           justifyContent: "center",
           padding: "100px",
         }}
-        >
+       >
         <h1
           style={{
             width: "800px",
@@ -148,8 +151,8 @@ function Home() {
           Move work forward faster with no-code apps that perfectly match your
           team’s agility and scale.
         </h3>
-      </div>
-      <div className="topdiv">
+       </div>
+       <div className="topdiv">
         <div className="topdivflex">
           <div className="fisrtdivh1">
             <h1
@@ -184,9 +187,9 @@ function Home() {
             </video>
           </div>
         </div>
-      </div>
+       </div>
 
-      <div className="topdiv">
+       <div className="topdiv">
         <div className="topdivflex">
           <div className="videodiv">
             <video className="video" width="700px" autoPlay loop muted>
@@ -251,9 +254,9 @@ function Home() {
             </h3>
           </div>
         </div>
-      </div>
+        </div>
 
-      <div className="topdiv">
+        <div className="topdiv">
         <div className="topdivflex">
           <img
             style={{
@@ -266,9 +269,9 @@ function Home() {
             alt=""
           />
         </div>
-      </div>
+        </div>
 
-      <div className="topdiv">
+        <div className="topdiv">
         <div className="topdivflex">
           <div className="fisrtdivh1">
             <h1
@@ -303,9 +306,9 @@ function Home() {
             </video>
           </div>
         </div>
-      </div>
+        </div>
 
-      <div className="topdiv">
+        <div className="topdiv">
         <div className="topdivflex">
           <div className="videodiv">
             <img
@@ -343,9 +346,9 @@ function Home() {
             </h3>
           </div>
         </div>
-      </div>
+        </div>
 
-      <div className="topdiv">
+        <div className="topdiv">
         <div className="topdivflex">
           <div className="">
             <h1
@@ -372,14 +375,14 @@ function Home() {
             </h3>
           </div>
         </div>
-      </div>
+        </div>
 
-      <div
+        <div
         className="topdiv"
         style={{
           marginTop: "0px",
         }}
-      >
+        >
         <div className="topdivflex">
           <div
             className="videodiv"
@@ -427,8 +430,8 @@ function Home() {
             </h3>
           </div>
         </div>
-      </div>
-      <div className="topdiv">
+        </div>
+        <div className="topdiv">
         <div
           className="fisrtdivh1"
           style={{
@@ -453,9 +456,7 @@ function Home() {
         </div>
       </div>
 
-      
       <DownNavbar />
-     
 
       <div>
         <Footer />

@@ -1,8 +1,11 @@
 import React from 'react'
+import AnotherNavbar from '../Navbar/AnotherNavbar'
 
 function Contactsales() {
   return (
-    <div>Contactsales</div>
+    <div>
+      <AnotherNavbar />
+    </div>
   )
 }
 
